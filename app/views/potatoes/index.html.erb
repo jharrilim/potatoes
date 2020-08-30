@@ -1,0 +1,19 @@
+<h1>Potatoes#index</h1>
+<p>Find me in app/views/potatoes/index.html.erb</p>
+<p>Potatoes go brrr</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+ 
+  <% @potatoes.each do |potato| %>
+    <tr>
+      <td><%= potato.title %></td>
+      <td><%= potato.price %></td>
+      <td><%= link_to 'Show', potato_path(potato) %></td>
+    </tr>
+  <% end %>
+</table>
