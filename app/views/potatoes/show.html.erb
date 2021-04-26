@@ -1,10 +1,15 @@
-
-<p>
-  <strong>Title:</strong>
-  <%= @potato.title %>
-</p>
- 
-<p>
-  <strong>Price:</strong>
-  <%= @potato.price %>
-</p>
+<div class="potato-page">
+  <div class="potato-card">
+    <%= form_with model: @potato do |f| %>
+      <p>
+        <strong>Title:</strong>
+        <%= f.text_field :title %>
+      </p>
+      <p>
+        <strong>Price:</strong>
+        <%= f.text_field :price %>
+      </p>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
